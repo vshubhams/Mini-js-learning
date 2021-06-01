@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3f58be3b9b.js" crossorigin="anonymous"></script>
+    <title>Mini JS Datatype</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+           font-family: 'Google Sans',Roboto,Arial,sans-serif;
+        }
+        .heading{
+            top: 0;
+            width: 100%;
+            background:white;
+            position: fixed;
+            z-index: 5;
+        }
+        div>h1{
+            text-align: center;
+            color: #3c4043;
+            margin: 0;
+            font-size: 45px;
+            font-weight: 300;
+        }
+        .dots{font-size:300%; text-align: center;}.blue{color:#4285F4;}.red{color:#EA4335;}.yellow{color:#FBBC05}.green{color:#34A853; }
+    
+        .container{
+            position: relative;
+            top: 107px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 30px;
+            min-height: 450px;
+        }
+        .container>div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 4px;
+            font-size: 30px;
+            color:#3c4043;
+            min-height: 60px;
+            border-radius: 50px;
+            padding-top: 10px;
+            box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+        }
+        .container>div:hover{
+            background-color: #E8F0FE;
+            color: #1A73E8;
+            cursor: pointer;
+        }
+        .innerDiv{
+            display: none;
+            width: 100%;
+            border-top: solid 1px #ccc;
+            background-color: white;
+            border-radius: 0 0 50px 50px;
+            color: #3c4043;
+            font-size: 20px;
+        }
+        ul{
+            margin: 15px;
+            margin-left: 60px;
+            line-height: 30px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Learn Javascript</h1>
+        <h1 class="dots">
+            <span class="blue">•</span>
+            <span class="red">•</span>
+            <span class="yellow">•</span>
+            <span class="blue">•</span>
+            <span class="green">•</span>
+            <span class="red">•</span>
+        </h1>
+    </div>
+
+
+    <div class="container">
+        <div onclick="show('functions','funDetail')" id="functions">Functions
+            <div class="innerDiv" id="funDetail">
+                <ul>
+                    <li>A JavaScript function is a block of code designed to perform a particular task</li>
+                    <li>A JavaScript function is executed when "something" invokes it (calls it).</li>
+                    <li>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().</li>
+                    <li>Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).</li>
+                    <li>The parentheses may include parameter names separated by commas:
+                    (parameter1, parameter2, ...)</li>
+                    <li>The code to be executed, by the function, is placed inside curly brackets: {}</li>
+                    <li>Function parameters are listed inside the parentheses () in the function definition.</li>
+                </ul>
+            </div>
+        </div>
+        <div onclick="show('strings','strDetail')" id="strings">Strings
+        <div class="innerDiv" id="strDetail">
+            <ul>
+                <li>A string (or a text string) is a series of characters like "Shubham verma".</li>
+                <li>Strings are written with quotes. You can use single or double quotes: <br>Example-
+                    <ul>
+                        <li>var car1 = "Bugatti";</li>
+                        <li>var car2 = 'Rolls Royce';</li>
+                    </ul>
+                </li>
+                <li>You can use quotes inside a string, as long as they don't match the quotes surrounding the string: <br>Example-
+                    <ul>
+                        <li>var a = "He is called 'Johnny' "</li>
+                        <li>var b = 'He is called "Johnny" '</li>
+                    </ul>
+                </li>
+                <li>Unlike some programming languages (such as C), JavaScript strings are immutable. This means that once a string is
+                created, it is not possible to modify it.</li>
+                
+            </ul>
+        </div>
+        </div>
+        <div onclick="show('objects','objDetail')" id="objects">Object
+        <div class="innerDiv" id="objDetail">
+            <ul>
+                <li>The object is a complex data type that allows you to store collections of data.</li>
+                <li>An object contains properties, defined as a key-value pair.</li>
+                <li>A property key (name) is always a string, but the value can be any data type, like strings, numbers, booleans, or
+                complex data types like arrays, function and other objects.</li>
+                <li>Object properties are written as name:value pairs, separated by commas. <br>Example-
+                    <ul>
+                        <li>var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</li> <br>
+                    </ul>
+                    The object (person) in the example above has 4 properties: firstName, lastName, age, and eyeColor.
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div onclick="show('numbers','numDetail')" id="numbers">Numbers
+        <div class="innerDiv" id="numDetail">
+            <ul>
+                <li>The number data type is used to represent positive or negative numbers with or without decimal place, or numbers written
+                using exponential notation e.g. 1.5e-4 (equivalent to 1.5x10-4). <br><br> Example-
+                  <ul>
+                      <li>var a = 25;</li>
+                      <li>var b = 80.5;</li>
+                      <li>var c = 4.25e+6;</li>
+                      <li>var d = 4.25e-6;</li>
+                  </ul>
+                </li>
+                <li>The Number data type also includes some special values which are: Infinity, -Infinity and NaN.
+                    <ul>
+                        <li>Infinity represents the mathematical Infinity ∞, which is greater than any number.</li>
+                        <li>NaN represents a special Not-a-Number value. It is a result of an invalid or an undefined mathematical operation</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div onclick="show('arrays','arrDetail')" id="arrays">Arrays
+        <div class="innerDiv" id="arrDetail">
+            <ul>
+                <li>An array is a type of object used for storing multiple values in single variable.</li>
+                <li>Each value (also called an element) in an array has a numeric position, known as its index, and it may contain data of
+                any data type-numbers, strings, booleans, functions, objects, and even other arrays.</li>
+                <li>Array indexes are zero-based, which means the first item is [0], second is [1], and so on.</li>
+                <li>The simplest way to create an array is by specifying the array elements as a comma-separated list enclosed by square
+                brackets, as shown in the example below: <br>Example-
+                <ul>
+                    <li>var colors = ["Red", "Yellow", "Green", "Orange"];</li>
+                    alert(colors[0]);  //Output: Red
+                    <li>var table = [2,4,6,8,10,12,14,16,18,20];</li>
+                    alert(table[2]); //Output: 6
+                </ul>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div onclick="show('null','nullDetail')" id="null">Null
+        <div class="innerDiv" id="nullDetail">
+            <ul>
+                <li>This is another special data type that can have only one value-the null value.</li>
+                <li>A null value means that there is no value.</li>
+                <li>It is not equivalent to an empty string ("") or 0, it is simply nothing.</li>
+                <li>A variable can be explicitly emptied of its current contents by assigning it the null value</li>
+                <li>Unfortunately, in JavaScript, the data type of null is an object.</li>
+            </ul>
+        </div>
+        </div>
+        <div onclick="show('undefined','undDetail')" id="undefined">Undefined
+        <div class="innerDiv" id="undDetail">
+            <ul>
+                <li>The undefined data type can only have one value-the special value undefined.</li>
+                <li>If a variable has been declared, but has not been assigned a value, has the value undefined.</li>
+                <li>Any variable can be emptied, by setting the value to undefined. The type will also be undefined.</li>
+                <li>A method or statement also returns undefined if the variable that is being evaluated does not have an assigned value.</li>
+                <li>A function returns undefined if a value was not returned.</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
+<script> 
+    var allInnerDiv=document.querySelectorAll('.innerDiv')
+    for(let i=0; i<allInnerDiv.length;i++){
+        allInnerDiv[i].style.display='none'
+    }
+function show(divId,inner){
+    var btn = document.getElementById(divId);
+    var detailDiv = document.getElementById(inner);
+
+    if(detailDiv.style.display==='none'){
+        console.log('none')
+        detailDiv.style.display='flex';
+    }else{
+        console.log('flex')
+        detailDiv.style.display='none'
+    }
+}
+</script>
